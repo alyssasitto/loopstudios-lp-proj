@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+
+:root {
+	--White: hsl(0, 0%, 100%);
+	--Black: hsl(0, 0%, 0%);
+	--Dark-gray: hsl(0, 0%, 55%);
+	--Very-dark-gray: hsl(0, 0%, 41%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Josefin Sans", sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: var(--White);
+	text-decoration: none;
+}
+
+.mobile,
+.desktop {
+	width: 100%;
+}
+
+.desktop {
+	display: none;
+}
+
+.container {
+	padding: 0 2rem;
+}
+
+/********* HEADER & NAV STYLES **********/
+
+.header {
+	min-height: 66.7rem;
+	margin-bottom: 9.7rem;
+	background-image: url(images/mobile/image-hero.jpg);
+	background-size: cover;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20rem;
+	padding-top: 1.5rem;
+}
+
+.logo {
+	height: 25px;
+}
+
+.header-nav-items {
+	display: none;
+}
+
+.buttons {
+	position: relative;
+}
+
+.exit {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.heading h1 {
+	padding: 2.5rem;
+	font-size: 4rem;
+	font-weight: 300;
+	color: var(--White);
+	text-transform: uppercase;
+	border: 1px solid var(--White);
+}
+
+/********* MISSION SECTION STYLES **********/
