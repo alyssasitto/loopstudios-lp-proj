@@ -242,7 +242,7 @@ small {
 	}
 
 	.header-nav {
-		margin-bottom: 15rem;
+		margin-bottom: 13rem;
 		padding-top: 8rem;
 	}
 
@@ -282,9 +282,7 @@ small {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		position: relative;
-	}
-
-	.mission-statement .desktop {
+		margin-bottom: 18rem;
 	}
 
 	.ms-container {
@@ -313,9 +311,15 @@ small {
 		text-align: left;
 	}
 
+	.creations h2 {
+		font-size: 4rem;
+		margin-bottom: 9rem;
+	}
+
 	.creations div {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+		margin-bottom: 18rem;
 	}
 
 	.creations section {
@@ -347,6 +351,13 @@ small {
 		top: 0;
 		right: 15rem;
 		margin-bottom: 0;
+		cursor: pointer;
+		transition: all 0.2s;
+	}
+
+	.creations-btn:hover {
+		color: var(--White);
+		background-color: var(--Black);
 	}
 
 	/* FOOTER STYLES */
@@ -358,6 +369,7 @@ small {
 	}
 
 	.footer-logo {
+		height: 25px;
 		margin-bottom: 0;
 	}
 
@@ -375,7 +387,7 @@ small {
 	}
 
 	.social-media img {
-		height: 30px;
+		height: 25px;
 		cursor: pointer;
 	}
 
@@ -385,6 +397,26 @@ small {
 	}
 
 	small {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
+	}
+
+	li {
+		position: relative;
+	}
+
+	li::after {
+		content: "";
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		width: 0%;
+		height: 2px;
+		background-color: var(--White);
+		transition: all 0.3s ease-out;
+	}
+
+	li:hover::after {
+		left: 0;
+		width: 100%;
 	}
 }
