@@ -148,7 +148,7 @@ a {
 	font-size: 3.3rem;
 }
 
-.creations .creations-container {
+.creations div {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
@@ -316,7 +316,7 @@ small {
 		margin-bottom: 9rem;
 	}
 
-	.creations .creations-container {
+	.creations div {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		margin-bottom: 18rem;
