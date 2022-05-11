@@ -10,12 +10,12 @@
 
 ### Screenshot
 
-![](images/lp-ss.png)
+![](images/ls-ss.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here](https://loopstudios12.netlify.app/)
+- Live Site URL: [Add live site URL here](https://loopstudios-15.netlify.app/)
 
 ## My process
 
