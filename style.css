@@ -18,7 +18,15 @@ html {
 }
 
 body {
+	margin: auto;
 	font-family: "Josefin Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
 ul {
@@ -46,45 +54,337 @@ a {
 /********* HEADER & NAV STYLES **********/
 
 .header {
-	min-height: 66.7rem;
+	height: 66.7rem;
 	margin-bottom: 9.7rem;
 	background-image: url(images/mobile/image-hero.jpg);
 	background-size: cover;
+	position: relative;
 }
 
-.nav {
+.header.active::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+.header-nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 20rem;
-	padding-top: 1.5rem;
+	padding-top: 4rem;
 }
 
 .logo {
 	height: 25px;
+	position: relative;
 }
 
 .header-nav-items {
 	display: none;
 }
 
-.buttons {
-	position: relative;
+.header.active .header-nav-items {
+	position: absolute;
+	top: 23rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	font-size: 2.5rem;
+	text-transform: uppercase;
 }
 
 .exit {
+	display: none;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 4rem;
+}
+
+.header.active .exit {
+	display: block;
 }
 
 .heading h1 {
 	padding: 2.5rem;
 	font-size: 4rem;
-	font-weight: 300;
 	color: var(--White);
-	text-transform: uppercase;
 	border: 1px solid var(--White);
 }
 
 /********* MISSION SECTION STYLES **********/
+
+.mission-statement {
+	margin-bottom: 9rem;
+	text-align: center;
+}
+
+.mission-statement .mobile {
+	margin-bottom: 4.8rem;
+}
+
+.ms-container h2 {
+	margin-bottom: 2.5rem;
+	font-size: 3.3rem;
+}
+
+.ms-container p {
+	padding: 0 2rem;
+	font-size: 1.6rem;
+	font-weight: bold;
+	line-height: 1.6;
+	color: var(--Very-dark-gray);
+}
+
+/********* CREATIONS SECTION STYLES **********/
+
+.creations {
+	text-align: center;
+}
+
+.creations h2 {
+	margin-bottom: 5.6rem;
+	font-size: 3.3rem;
+}
+
+.creations div {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin-bottom: 4rem;
+}
+
+.creations section {
+	position: relative;
+}
+
+.creations section::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.creations section h3 {
+	position: absolute;
+	z-index: 2;
+	left: 1.5rem;
+	bottom: 2rem;
+	font-size: 2.5rem;
+	color: var(--White);
+	text-align: left;
+}
+
+.creations-btn {
+	margin-bottom: 7rem;
+	padding: 1rem 4rem;
+	font-size: 1.5rem;
+	font-family: "Alata", sans-serif;
+	text-transform: uppercase;
+	background-color: transparent;
+	letter-spacing: 4px;
+	border: 1px solid var(--Black);
+}
+
+/********* FOOTER STYLES **********/
+
+.footer {
+	padding: 5rem 0;
+	text-align: center;
+	background-color: var(--Black);
+}
+
+.footer-logo {
+	margin-bottom: 3rem;
+}
+
+.footer-nav-items {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	margin-bottom: 4rem;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.social-media {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+small {
+	font-size: 1.5rem;
+	color: var(--Dark-gray);
+}
+
+/********* DESKTOP STYLES **********/
+
+@media screen and (min-width: 1440px) {
+	.container {
+		padding: 0 15rem;
+	}
+
+	.header {
+		margin-bottom: 16rem;
+		background-image: url(images/desktop/image-hero.jpg);
+	}
+
+	.header::before {
+		content: "";
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		position: absolute;
+	}
+
+	.header-nav {
+		margin-bottom: 15rem;
+		padding-top: 8rem;
+	}
+
+	.header-nav-items {
+		position: relative;
+		display: flex;
+		gap: 3rem;
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+
+	.logo {
+		height: 35px;
+	}
+
+	.heading {
+		max-width: 60vw;
+	}
+
+	.heading h1 {
+		position: relative;
+		font-size: 7rem;
+	}
+
+	.mobile,
+	.buttons {
+		display: none;
+	}
+
+	.desktop {
+		display: block;
+	}
+
+	/* MISSION SECTION */
+
+	.mission-statement {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		position: relative;
+	}
+
+	.mission-statement .desktop {
+	}
+
+	.ms-container {
+		position: absolute;
+		background-color: var(--White);
+		width: 600px;
+		bottom: 0;
+		right: 15rem;
+		padding: 15rem 0 0 8rem;
+		text-align: left;
+	}
+
+	.ms-container h2 {
+		font-size: 4.5rem;
+	}
+
+	.ms-container p {
+		padding: 0;
+		font-size: 1.9rem;
+	}
+
+	/* CREATIONS SECTION */
+
+	.creations {
+		position: relative;
+		text-align: left;
+	}
+
+	.creations div {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	.creations section {
+		cursor: pointer;
+	}
+
+	.creations section h3 {
+		left: 4rem;
+		bottom: 4rem;
+		font-size: 3.5rem;
+	}
+
+	.creations section:hover h3 {
+		color: black;
+	}
+
+	.creations section::before {
+		content: "";
+		position: absolute;
+		left: 0;
+	}
+
+	.creations section:hover::before {
+		background-color: rgba(223, 220, 220, 0.7);
+	}
+
+	.creations-btn {
+		position: absolute;
+		top: 0;
+		right: 15rem;
+		margin-bottom: 0;
+	}
+
+	/* FOOTER STYLES */
+
+	.footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 4rem 0 1rem;
+	}
+
+	.footer-logo {
+		margin-bottom: 0;
+	}
+
+	.footer-nav {
+		text-align: left;
+	}
+
+	.footer-nav-items {
+		flex-direction: row;
+	}
+
+	.social-media {
+		justify-content: right;
+		margin-bottom: 0;
+	}
+
+	.social-media img {
+		height: 30px;
+		cursor: pointer;
+	}
+
+	.footer-logo,
+	.social-media {
+		margin-bottom: 3rem;
+	}
+
+	small {
+		font-size: 1.8rem;
+	}
+}
