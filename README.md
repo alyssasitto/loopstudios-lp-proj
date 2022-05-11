@@ -10,7 +10,7 @@
 
 ### Screenshot
 
-![](images/loopstudios-ss.png)
+![](images/lp-ss.png)
 
 ### Links
 
